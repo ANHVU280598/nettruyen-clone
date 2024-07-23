@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className="flex flex-col h-screen w-screen bg-black">
-        <div className="w-full"><FirstNavBar h={"50px"} w={200} /></div>
-        <div className="w-full sticky top-0"><SecondNavBar h={"50px"} w={200} /></div>
+        <div className="w-full"><FirstNavBar /></div>
+        <div className="w-full sticky top-0"><SecondNavBar /></div>
         <div className="flex flex-col w-full">{children}</div>
       </body>
     </html>
