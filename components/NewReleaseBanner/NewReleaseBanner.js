@@ -25,7 +25,7 @@ export default function NewReleaseBanner() {
   }, [displayRound]);
 
   return (
-    <div className="relative w-full -z-10">
+    <div className="relative h-[270px] bg-slate-800/50 w-full -z-10">
       <div
         className="flex transition-transform duration-1000"
         style={{ transform: `translateX(-${(currentIndex / 3) * 100}%)` }}

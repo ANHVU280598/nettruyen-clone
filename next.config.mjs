@@ -7,6 +7,11 @@ const nextConfig = {
                 hostname: 'jumpg-assets.tokyo-cdn.com',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'mangaplus.shueisha.co.jp',
+                pathname: '/**',
+            },
         ],
     },
 };
