@@ -10,7 +10,7 @@ export default function FirstNavBarAccount() {
                 <span>Account</span>
                 <div className='absolute top-[100%] left-0 w-[100px] bg-white text-black invisible group-hover:visible group-hover:block divide-y-2'>
                     {accountMenu.map((item, id) => (
-                        <div key={id} className='flex flex-row items-center space-x-2 p-1 hover:bg-gray-200 cursor-pointer'>
+                        <div key={`firstnav${id}`} className='flex flex-row items-center space-x-2 p-1 hover:bg-gray-200 cursor-pointer'>
                             <span>{item.icon}</span> 
                             <span>{item.name}</span>
                         </div>

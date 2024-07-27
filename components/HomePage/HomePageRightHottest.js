@@ -44,7 +44,7 @@ export default function HomePageRightHottest() {
             </div>
             {
                 hottestObj.map((value, index) => (
-                    <div className='w-full'>
+                    <div className='w-full' key={`homepagerighthottes${index}`}>
                         <HomePageRightHottestDisplay name={value.name} author={value.author} view={value.view} linkComic={value.linkComic} index={index + 1} key={"hottest" + index} />
                     </div>
                 ))

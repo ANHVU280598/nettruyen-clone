@@ -4,6 +4,7 @@ import "./globals.css";
 import FirstNavBar from "@/components/NavBar/FirstNavBar";
 import SecondNavBar from "@/components/NavBar/SecondNavBar";
 import Head from "next/head";
+import ReduxProvider from "@/components/reduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,11 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className="flex flex-col h-screen w-screen bg-black">
-        <div className="w-full"><FirstNavBar /></div>
-        <div className="w-full sticky top-0"><SecondNavBar /></div>
-        <div className="flex flex-col w-full">{children}</div>
+        <ReduxProvider>
+          <div className="w-full"><FirstNavBar /></div>
+          <div className="w-full sticky top-0"><SecondNavBar /></div>
+          <div className="flex flex-col w-full">{children}</div>
+        </ReduxProvider>
       </body>
     </html>
   );

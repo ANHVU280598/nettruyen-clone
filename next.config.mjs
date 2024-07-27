@@ -9,11 +9,22 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'mangaplus.shueisha.co.jp',
+                hostname: 'dtcdnyacd.com',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'cmnvymn.com',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'nettruyenaa.com',
                 pathname: '/**',
             },
         ],
     },
 };
+
 
 export default nextConfig;

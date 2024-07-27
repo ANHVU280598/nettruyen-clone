@@ -32,7 +32,7 @@ export default function NewReleaseBanner() {
       >
         {images.map((src, index) => (
           <div
-            key={index}
+            key={`newrelease${index}`}
             className="relative h-[230px] w-[200px] flex-shrink-0 flex"
             style={{ width: "33.33%" }} // Make sure each image takes 1/3 of the container width
           >
@@ -40,8 +40,8 @@ export default function NewReleaseBanner() {
             className='p-1'
               src={src}
               alt={`Slide ${index + 1}`}
-              layout="fill"
-              objectFit="cover"
+              fill
+              style="cover"
             />
           </div>
         ))}

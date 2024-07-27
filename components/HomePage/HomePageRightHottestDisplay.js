@@ -30,8 +30,8 @@ export default function HomePageRightHottestDisplay({ name, author, view, linkCo
                 <Image
                     alt="img-not-found"
                     src={linkComic}
-                    layout='fill'
-                    objectFit='cover'
+                    fill
+                    style='cover'
                 />
             </div>
             <div className='flex flex-col space-y-2 justify-center'>
