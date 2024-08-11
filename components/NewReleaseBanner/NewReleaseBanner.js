@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const images = [
   'https://jumpg-assets.tokyo-cdn.com/secure/top_banner/354934.jpg?hash=AM_E_xyQ6TaeABlxNUorWg&expires=2145884400',
@@ -40,8 +40,8 @@ export default function NewReleaseBanner() {
             className='p-1'
               src={src}
               alt={`Slide ${index + 1}`}
-              fill
-              style="cover"
+              layout='fill'
+              priority
             />
           </div>
         ))}

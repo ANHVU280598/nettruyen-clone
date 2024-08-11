@@ -1,7 +1,7 @@
 import { faFirstOrder } from '@fortawesome/free-brands-svg-icons'
 import { faFire, faMedal, faRankingStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import React from 'react'
 
 export default function HomePageRightHottestDisplay({ name, author, view, linkComic, index }) {
@@ -30,7 +30,7 @@ export default function HomePageRightHottestDisplay({ name, author, view, linkCo
                 <Image
                     alt="img-not-found"
                     src={linkComic}
-                    fill
+                    layout='fill'
                     style='cover'
                 />
             </div>

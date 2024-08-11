@@ -4,13 +4,9 @@ import Papa from 'papaparse';
 
 // Define a thunk for fetching and parsing the CSV file
 export const fetchCsvData = createAsyncThunk('api/fetchCsvData', async () => {
-    const response = await axios.get('https://raw.githubusercontent.com/ANHVU280598/nettruyen-scrapping/main/ComicGeneral.csv');
-    const csvData = response.data;
-
-    // Parse the CSV data
-    const parsedData = Papa.parse(csvData, { header: true }).data;
-
-    return parsedData;
+    const response = await axios.get('https://raw.githubusercontent.com/ANHVU280598/nettruyen-scrapping/main/comica.json');
+    const jsonData = response.data;
+    return jsonData;
 });
 
 const csvDataSlice = createSlice({
@@ -19,10 +15,15 @@ const csvDataSlice = createSlice({
         data: [],
         status: 'idle',
         error: null,
+        copyData: [],
+        hotData: []
     },
     reducers: {
         resetStatus: (state) => {
             state.status = 'idle';
+        },
+        sortData: (state) => {
+            state.data = state.data.sort((a, b) => b.love - a.love)
         }
     },
     extraReducers: (builder) => {
@@ -33,6 +34,8 @@ const csvDataSlice = createSlice({
             .addCase(fetchCsvData.fulfilled, (state, action) => {
                 state.status = 'succeeded';
                 state.data = action.payload;
+                state.copyData = action.payload;
+                state.hotData = action.payload.sort((a,b) => b.view_count - a.view_count)
             })
             .addCase(fetchCsvData.rejected, (state, action) => {
                 state.status = 'failed';
@@ -41,6 +44,6 @@ const csvDataSlice = createSlice({
     },
 });
 
-export const { resetStatus } = csvDataSlice.actions;
+export const { resetStatus, sortData } = csvDataSlice.actions;
 
 export default csvDataSlice.reducer;

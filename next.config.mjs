@@ -19,7 +19,7 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'nettruyenaa.com',
+                hostname: 'manhwaclan.com',
                 pathname: '/**',
             },
         ],
