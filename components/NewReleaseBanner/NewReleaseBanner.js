@@ -17,7 +17,7 @@ export default function NewReleaseBanner() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 3) % images.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
       setRound(!displayRound)
     }, 3000); // Change slide every 3 seconds
 
@@ -25,16 +25,15 @@ export default function NewReleaseBanner() {
   }, [displayRound]);
 
   return (
-    <div className="relative h-[270px] bg-slate-800/50 w-full -z-10">
+    <div className="relative h-[270px] bg-slate-800/50 w-full -z-10 py-2">
       <div
         className="flex transition-transform duration-1000"
-        style={{ transform: `translateX(-${(currentIndex / 3) * 100}%)` }}
+        style={{ transform: `translateX(-${(currentIndex / 1) * 100}%)` }}
       >
         {images.map((src, index) => (
           <div
             key={`newrelease${index}`}
-            className="relative h-[230px] w-[200px] flex-shrink-0 flex"
-            style={{ width: "33.33%" }} // Make sure each image takes 1/3 of the container width
+            className="relative h-[230px] w-[200px] flex-shrink-0 flex w-full"
           >
             <Image
             className='p-1'

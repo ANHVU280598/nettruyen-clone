@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
 import FirstNavBar from "@/components/NavBar/FirstNavBar";
 import SecondNavBar from "@/components/NavBar/SecondNavBar";
 import Head from "next/head";
@@ -26,6 +25,7 @@ export default function RootLayout({ children }) {
           <div className="w-full sticky top-0 z-20"><SecondNavBar /></div>
           <div className="flex flex-col w-full">{children}</div> */}
           <NavBar/>
+          <div className="flex flex-col w-full">{children}</div> 
         </ReduxProvider>
       </body>
     </html>

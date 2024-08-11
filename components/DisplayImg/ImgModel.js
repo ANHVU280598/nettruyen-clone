@@ -1,15 +1,18 @@
 import Image from 'next/image'
 import React from 'react'
 
+
 export default function ImgModel() {
     return (
-        <div className='relative h-[65px] w-[65px] rounded-full'>
+        <div className='relative h-[75px] w-[75px]'>
             <Image
-                className='rounded-full'
+                className=''
                 alt='No Image Found'
-                src='/weblogo.jpg'
+                src='/Logo.png'
+                priority
                 fill
-                objectFit='contain'
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{ objectFit: 'contain' }}
             />
         </div>
     )
