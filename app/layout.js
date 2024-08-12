@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="flex flex-col h-screen w-screen bg-black">
+      <body className="flex flex-col h-full w-full bg-black">
         <ReduxProvider>
           {/* <div className="w-full"><FirstNavBar /></div>
           <div className="w-full sticky top-0 z-20"><SecondNavBar /></div>

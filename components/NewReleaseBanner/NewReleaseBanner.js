@@ -33,7 +33,7 @@ export default function NewReleaseBanner() {
         {images.map((src, index) => (
           <div
             key={`newrelease${index}`}
-            className="relative h-[230px] w-[200px] flex-shrink-0 flex w-full"
+            className="relative h-[230px] flex-shrink-0 flex w-full"
           >
             <Image
             className='p-1'

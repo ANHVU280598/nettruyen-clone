@@ -4,7 +4,7 @@ import Papa from 'papaparse';
 
 // Define a thunk for fetching and parsing the CSV file
 export const fetchCsvData = createAsyncThunk('api/fetchCsvData', async () => {
-    const response = await axios.get('https://raw.githubusercontent.com/ANHVU280598/nettruyen-scrapping/main/comica.json');
+    const response = await axios.get('https://raw.githubusercontent.com/ANHVU280598/nettruyen-scrapping/main/comics.json');
     const jsonData = response.data;
     return jsonData;
 });
@@ -35,7 +35,7 @@ const csvDataSlice = createSlice({
                 state.status = 'succeeded';
                 state.data = action.payload;
                 state.copyData = action.payload;
-                state.hotData = action.payload.sort((a,b) => b.view_count - a.view_count)
+                state.hotData = action.payload.sort((a,b) => b.rating - a.rating)
             })
             .addCase(fetchCsvData.rejected, (state, action) => {
                 state.status = 'failed';

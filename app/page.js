@@ -5,7 +5,7 @@ import Image from "next/legacy/image";
 
 export default function Home() {
   return (
-    <main className="flex h-screen w-screen overflow-y-scroll">
+    <main className="flex h-full w-full overflow-y-scroll">
       <HomeCpm/>
     </main>
   );

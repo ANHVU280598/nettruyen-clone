@@ -14,7 +14,7 @@ export default function NavBar() {
       {
         !searchBtn && <div className='flex flex-row w-full justify-between items-center'>
           <Hamburger />
-          <ImgModel />
+          <ImgModel src="/Logo.png" h="h-[75px]" w="w-[75px]" objectFit={"cover"}/>
           <FontAwesomeIcon icon={faMagnifyingGlass} color='white' className='h-5 w-5 cursor-point' onClick={() => isSearchBtn(true)} />
         </div>
       }
