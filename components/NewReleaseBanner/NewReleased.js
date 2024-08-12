@@ -21,7 +21,7 @@ export default function NewReleased() {
       setRound(!displayRound)
     }, 3000);
     return () => clearInterval(interval); 
-  }, [displayRound])
+  }, [displayRound, images.length])
 
   return (
     <div className='flex flex-col sm:h-[230px] w-full bg-slate-500/10 p-2'>

@@ -16,8 +16,7 @@ export default function HomeCpmMainDisplayComics() {
         if (status != 'succeeded') {
             dispatch(fetchCsvData())
         }
-    }, [data])
-    console.log(data);
+    }, [data, dispatch,status])
 
     return (
         <div className='grid grid-cols-1 gap-y-5 mt-5'>

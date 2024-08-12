@@ -22,7 +22,7 @@ export default function HomePageLeftAnimeDisplay() {
         if (status != "succeeded") {
             dispatch(fetchCsvData())
         }
-    }, [data])
+    }, [data,status])
 
     if (status == "loading") return <div className='text-white'>Loading....</div>
 
